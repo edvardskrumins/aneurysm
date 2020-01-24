@@ -1,4 +1,4 @@
 user-agent: *
 allow /coil-aneurysms-treatment/
-Disallow: /coil-aneurysms-treatment/optimizedFiles
+Disallow: /coil-aneurysms-treatment/optimizedFiles*
 Sitemap: https://edvardskrumins.github.io/coil-aneurysms-treatment/sitemap
