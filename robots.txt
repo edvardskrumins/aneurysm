@@ -1,0 +1,4 @@
+user-agent: *
+allow /coil-aneurysms-treatment/
+
+Sitemap: https://edvardskrumins.github.io/coil-aneurysms-treatment/sitemap
