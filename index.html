@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AO Solutions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .centered {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .image-text {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transition: opacity;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+
+
+        .logo {
+            width: 100px;
+            margin-left: 20px;
+         }
+        .company-name {
+            color: MidnightBlue;
+        }
+        li {
+            list-style: none;
+        }
+        .mobile-company-name {
+            background-color: #f6f6f6;
+            margin-top: -22px;
+            height:100%;
+        }
+        #logo-mobile {
+            margin-left: 70px;
+            width:20%;
+        }
+
+
+
+
+        @media
+        (min-device-width: 900px) {
+            .quote {
+                margin-top: 110px;
+            }
+        }
+
+
+
+
+    </style>
+    <script>
+
+        $(document).ready(function(){
+                $("#firstQuote").hide().fadeIn(2000);
+                $("#firstQuoteLS").hide().fadeIn(2000);
+
+        });
+    </script>
+</head>
+<body>
+
+<!--Navbar for desktop-->
+<nav class="uk-navbar-container uk-margin uk-visible@m" uk-navbar>
+    <div class="uk-navbar-left">
+        <!--<img class="uk-navbar-item" src="./images/logo.png" id="logo"/>-->
+        <img src="./images/logo.png" class="logo"/>
+        <h2 class="company-name">AO SOLUTIONS</h2>
+    </div>
+
+    <div class="uk-navbar-right" style="margin-right: 150px">
+
+        <ul class="uk-navbar-nav">
+            <li>
+                <a href="./us.html">
+                     About us
+                </a>
+            </li>
+            <li>
+                <a href="./products.html">
+                    Products
+                </a>
+            </li>
+            <li>
+                <a href="./contacts.html">
+                    Contacts
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+
+
+<!--Navbar for mobile-->
+
+
+<nav class="uk-navbar uk-navbar-container uk-margin uk-hidden@m" style="max-height: 40px">
+    <div class="uk-navbar">
+        <!--<button uk-navbar-toggle-icon class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip"></button>-->
+        <button class="uk-button " type="button" uk-toggle="target: #offcanvas-flip"><span uk-navbar-toggle-icon></span></button>
+        <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+            <div class="uk-offcanvas-bar">
+
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+
+                <div class="uk-card uk-card-default uk-card-body">
+                    <img src="./images/logo.png"/> </br>
+                    <h2 class="company-name" class="uk-text-center"> AO SOLUTIONS</h2>
+                </div>
+
+                <ul >
+                        <li>
+                            <a href="./us.html">
+                                <!--<span class="uk-margin-small-right"></span>-->
+                               - About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./products.html">
+                                <!--<span class="uk-margin-small-right"></span>-->
+                               - Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html">
+                               - Contacts
+                            </a>
+                        </li>
+                    </ul>
+
+            </div>
+        </div>
+        <!--<a class="uk-navbar-toggle" href="#">-->
+            <!--<span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>-->
+        <!--</a>-->
+    </div>
+    <img class="uk-hidden@m" src="./images/logo.png" id="logo-mobile"/>
+</nav>
+<div class="mobile-company-name uk-text-center uk-hidden@m">
+<h2 class="company-name" class="uk-text-center"> AO SOLUTIONS</h2>
+</div>
+
+
+<!--Slides section-->
+
+<div>
+<img class="mySlides w3-animate-right" src="images/slide-image-1.jpg" style="width:100%">
+<img class="mySlides w3-animate-right" src="./images/slide-image-2.jpg" style="width:100%">
+<img class="mySlides w3-animate-right" src="./images/slide-image-3.jpg" style="max-heigth:50%">
+
+<div class="centered uk-visible@m quote">
+
+    <h1 class="myQuotes image-text uk-visible@m" id="firstQuote">
+        We represent innovative technological solutions in invasive neuroradiology.
+
+    </h1>
+    <h1 class="myQuotes image-text">
+        The availability of modern cutting edge technology and its quality significantly improves the
+        ability for our partners – the doctors and specialists to treat their patients the best they can.
+    </h1>
+</div>
+
+
+</div>
+
+
+
+
+
+<script>
+    var myIndex = 0;
+    var quoteIndex = 0;
+    carousel();
+    Quotecarousel();
+
+    function carousel() {
+        console.log("xd");
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 5000);
+    }
+
+    function Quotecarousel() {
+
+        var j;
+        var y = document.getElementsByClassName("myQuotes");
+        for (j = 0; j < y.length; j++) {
+            y[j].style.display = "none";
+        }
+        quoteIndex++;
+        if (quoteIndex > y.length) {quoteIndex = 1}
+        y[quoteIndex-1].style.display = "block";
+
+        setTimeout(Quotecarousel, 7000);
+    }
+
+
+
+</script>
+</body>
+</html>

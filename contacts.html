@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title> Contacts </title>
+
+<style>
+    .logo {
+        width: 100px;
+        margin-left: 20px;
+    }
+
+    .mobile-company-name {
+        background-color: #f6f6f6;
+        margin-top: -22px;
+        height:100%;
+    }
+    .company-name {
+        color: MidnightBlue;
+    }
+    #logo-mobile {
+        margin-left: 50px;
+        width: 100px;
+    }
+    li {
+        list-style: none;
+    }
+</style>
+</head>
+<body>
+
+<!--Navbar for desktop-->
+<nav class="uk-navbar-container uk-margin uk-visible@m" uk-navbar>
+    <div class="uk-navbar-left">
+        <a href="./index.html" >
+        <img src="./images/logo.png" class="logo"/>
+        </a>
+        <h2 class="company-name">AO SOLUTIONS</h2>
+    </div>
+    <div class="uk-navbar-right" style="margin-right: 150px">
+
+        <ul class="uk-navbar-nav">
+            <li>
+                <a href="./us.html">
+                    <span class="uk-margin-small-right" uk-icon="icon: star"></span>
+                    About us
+                </a>
+            </li>
+            <li>
+                <a href="./products.html">
+                    <span class="uk-margin-small-right" uk-icon="icon: star"></span>
+                    Products
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="uk-margin-small-right" uk-icon="icon: star"></span>
+                    Contacts
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!--Navbar for mobile-->
+
+
+<nav class="uk-navbar uk-navbar-container uk-margin uk-hidden@m">
+    <div class="uk-navbar-left">
+        <!--<button uk-navbar-toggle-icon class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip"></button>-->
+        <button class="uk-button " type="button" uk-toggle="target: #offcanvas-flip"><span uk-navbar-toggle-icon></span></button>
+        <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+            <div class="uk-offcanvas-bar">
+
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+
+                <div class="uk-card uk-card-default uk-card-body">
+                    <img src="./images/logo.png" /> </br>
+                    <h2 class="company-name" class="uk-text-center"> AO SOLUTIONS</h2>
+                </div>
+
+                <ul >
+                    <li>
+                        <a href="./us.html">
+                            <!--<span class="uk-margin-small-right"></span>-->
+                           - About us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./products.html">
+                            <!--<span class="uk-margin-small-right"></span>-->
+                           - Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           - Contacts
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <a href="./index.html">
+        <img class="uk-hidden@m" id="logo-mobile" src="./images/logo.png" />
+    </a>
+</nav>
+<div class="mobile-company-name uk-text-center uk-hidden@m">
+    <h2 class="company-name" class="uk-text-center"> AO SOLUTIONS</h2>
+</div>
+</nav>
+
+
+
+
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-text-center uk-align-center">
+    <h3 class="uk-card-title"> Contacts </h3>
+    <p> SIA "AO Solutions” </br>
+        Reg. number: 40103805573 </br>
+        Address: Bruņinieku iela 52 - 21, </br>
+        Riga, LV-1011 </br>
+        Email: dr.andiskrumins@gmail.com </br>
+        Phone number: +371 29211089</p> </br>
+</div>
+</body>
+</html>
